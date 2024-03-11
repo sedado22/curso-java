@@ -1,21 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- zona del favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <nav>
-            <h1>CAC-MOVIES</h1>
-            <ol>
-                <li>Tendencias</li>
-                <li><a href="./register.html">Registrarse</a></li>
-                <li><a href="https://developer.themoviedb.org" target="_blank" title="Haz Click para ir a la APi">API Movie</a></li>
+            <a href="./index.html">🎥CAC-MOVIES</a>
+            <ul>
+                <li><a href="#popular">Tendencias</a></li>
+                <li><a href="./templates/register.html">Registrarse</a></li>
+                <li><a href="https://developer.themoviedb.org" target="_blank" title="Haz Click para ir a la APi">API
+                        Movie</a></li>
                 <li>Iniciar Sesion</li>
-            </ol>
+            </ul>
         </nav>
     </header>
+
+    <!-- Esta es la parte principal de nuestra pagina -->
+    <main>
+        <!-- seccion de portada -->
+        <section id="banner">
+            <div>
+                <!-- titular -->
+                <h1>Peliculas y series ilimitadas en un solo lugar</h1>
+                <h2>Disfruta donde quieras. 
+                    <br>
+                     Cancela en cualquier momento.
+                    </h2>
+                    <a href="./templates/register.html">Registrate</a>
+            </div>
+        </section>
+        <!-- buscador de peliculas -->
+        <section id="search">
+            <h3>¿Que estas buscando para ver?</h3>
+        </section>
+
+        <section id="popular">
+            <div>
+                <h3>Las Tendencias de Hoy</h3>
+                <div id="list-popular">
+                    <table>
+                        <!-- fila 1 -->
+                        <tr>
+                            <td><a href="#"><div class="movie"><img src="https://picsum.photos/200" alt="imagen random" title="Haz Click por mas info"></div></a></td>
+                            <td><a href="#"><div class="movie"><img src="https://picsum.photos/201" alt="imagen random" title="Haz Click por mas info"></div></a></td>
+                            <td><a href="#"><div class="movie"><img src="https://picsum.photos/202" alt="imagen random" title="Haz Click por mas info"></div></a></td>
+                            <td><a href="#"><div class="movie"><img src="https://picsum.photos/203" alt="imagen random" title="Haz Click por mas info"></div></a></td>
+                            <td><a href="#"><div class="movie"><img src="https://picsum.photos/204" alt="imagen random" title="Haz Click por mas info"></div></a></td>
+                            <td><a href="#"><div class="movie"><img src="https://picsum.photos/205" alt="imagen random" title="Haz Click por mas info"></div></a></td>
+
+                        </tr>
+                        <!-- fila 2 -->
+                        <tr>
+                            <td><a href="#"><div class="movie"><img src="https://picsum.photos/206" alt="imagen random" title="Haz Click por mas info"></div></a></td>
+                            <td><a href="#"><div class="movie"><img src="https://picsum.photos/207" alt="imagen random" title="Haz Click por mas info"></div></a></td>
+                            <td><a href="#"><div class="movie"><img src="https://picsum.photos/208" alt="imagen random" title="Haz Click por mas info"></div></a></td>
+                            <td><a href="#"><div class="movie"><img src="https://picsum.photos/209" alt="imagen random" title="Haz Click por mas info"></div></a></td>
+                            <td><a href="#"><div class="movie"><img src="https://picsum.photos/210" alt="imagen random" title="Haz Click por mas info"></div></a></td>
+                            <td><a href="#"><div class="movie"><img src="https://picsum.photos/211" alt="imagen random" title="Haz Click por mas info"></div></a></td>
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
+        </section>
+        <section id="top-rated"></section>
+    </main>
+
+    <footer></footer>
 </body>
+
 </html>
