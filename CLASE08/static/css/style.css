@@ -1,0 +1,71 @@
+/* Repaso CSS 1:	Eliminar la decoración de los 
+hipervínculos, agregar color y tamaño de 
+fuente a la etiqueta <h2></h2> */
+
+/* “:root”, es un selector especial
+ que se utiliza principalmente 
+ para definir variables personalizadas de CSS */
+
+ :root{
+    --primary-color: #9f3647;    
+    --bg-color:#181419;
+    --secondary-color:#ffc098;
+    --third-color:#db4648;
+    --third-bis-color:#db4648f2;
+    --bg-input-color:#4f31572c;
+    --white-color: #fdf5ef;
+    /* fuentes */
+    --primary-font:'Nunito', sans-serif;
+ }
+
+ /* selector all */
+ *{
+   margin:0;
+   padding:0;
+ }
+
+ /* selector de etiquetas */
+ a{
+   text-decoration: none;
+   color: var(--white-color);
+ }
+
+ h2{
+   color: var(--white-color);
+   font-size: 2rem;
+ }
+
+ #logo{
+   font-weight: bold;
+ }
+
+ .search-title{
+   font-size: 4rem;
+ }
+
+ .movie-item-img{
+   width: 200px;
+   height: 300px;
+   object-fit: cover;
+ }
+
+ /*Repaso  CSS 2: Unidades de medida. Colores CSS.
+  Fondos en CSS. Fuentes y tipografías. 
+  Estilos para textos y listas. Íconos --------------------------*/
+
+/* Se incorporó en el index.html los links para referenciar fuente externa. */
+/* Se agregó la etiqueta <link> que se utiliza para especificar el ícono
+(favicon) que se muestra en la pestaña del navegador o en la barra de direcciones */
+
+body{
+   background-color: var(--bg-color);
+   font-family: var(--primary-font);
+}
+
+#banner{
+   background-image: url(../img/banner-bg.jpg);
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+   box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.5) ;
+}
