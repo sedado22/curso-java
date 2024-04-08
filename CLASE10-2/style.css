@@ -1,0 +1,15 @@
+/* Clase 10 : grid css*/
+/* selectores de etiquetas */
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* selectores de clase */
+.container{
+    /* dimensiones */
+    max-width: 980px;
+    margin: 0 auto;
+
+}
