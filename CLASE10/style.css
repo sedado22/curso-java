@@ -1,0 +1,74 @@
+/* Clase 9: Flexbox y media queries */
+
+/* estilos a selectores de etiquetas */
+html{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+header{
+  background-color: blue;
+  height: 10vh;
+  /* comportamiento flex de los hijos */
+  display: flex;
+  justify-content: center; /*centrar horizontalmente*/
+  align-items: center;/*centrar verticalmente*/
+}
+main{
+  background-color: yellow;
+  height: 80vh;
+}
+footer{
+  background-color: blue;
+  height: 8vh;
+  /* comportamiento flex de los hijos */
+  display: flex;
+  justify-content: center; /*centrar horizontalmente*/
+  align-items: center;/*centrar verticalmente*/
+}
+
+/* selectores de clase */
+.container{
+  display: flex;
+  flex-direction: row; /*cambiar direccion principal*/
+  flex-wrap: wrap;
+  /*alineamientos de cajas*/
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background-color: yellow;
+}
+.item{
+  height: 300px;
+  width: 300px;
+  border: 2px solid black;
+  background-color: white;
+  /*Posicionamos numeros al centro*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media queries */
+@media only screen and (max-width:600px){
+    .container{
+      flex-direction: column;
+      background-color: cadetblue;
+    }
+    .item{
+      background-color: red;
+      height: 100px;
+      width: 100px;
+    }
+}
+
+/* desde 601px hasta 768px */
+@media only screen and (min-width:601px) and (max-width:768px){
+  .container{
+    background-color: lightpink;
+  }
+  .item{
+    background-color: lightgreen;
+    height: 200px;
+    width: 200px;
+  }
+}
