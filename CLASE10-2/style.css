@@ -1,15 +1,135 @@
 /* Clase 10 : grid css*/
 /* selectores de etiquetas */
-body,html{
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /* selectores de clase */
-.container{
+.container {
     /* dimensiones */
     max-width: 980px;
     margin: 0 auto;
+    /* predisposicion al padre de las grillas*/
+    display: grid;
+    /* cantidad de columnas y sus dimensiones */
+    grid-template-columns: repeat(6, 1fr);
+    /* cantidad de filas y dimensiones */
+    grid-template-rows: 10vh 75vh 10vh;
+    /* dimensiones a los gaps */
+    gap: 10px 20px;
+}
 
+.main {
+    /* predisponemos al padre al grid */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-start: 1;
+    grid-column-end: 7;
+    /* valor de las separaciones gap  */
+    gap: 10px;
+}
+
+.aside {
+    /* cuantas columnas ocupa aside? */
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: lightsteelblue;
+    padding: 10px;
+}
+
+/* estilos a h2 en aside */
+.aside h2 {
+    font-size: 1.2rem;
+}
+
+.aside ul li a {
+    color: salmon;
+    text-decoration: none;
+}
+
+.aside ul li a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    /* cuantas columnas ocupa*/
+    grid-column-start: 3;
+    grid-column-end: 7;
+    background-color: lightseagreen;
+    font-size: 1, 2rem;
+    padding: 10px;
+}
+
+/* PIE/HEADER */
+
+.nav, .nav ul{
+    /* predisponemos al comportamiento grid */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    /* cuantas columnas del padre ocupamos? */
+    grid-column-start: 1;
+    grid-column-end: 7;
+    /* separaciones */
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    background-color: grey;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: pink;
+}
+
+.nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* trabajamos con pseudoselectores */
+.footer ul li:nth-child(1){
+    grid-column: 2; /* valor de la columna real*/
+}
+
+.header ul li:nth-child(1){
+    grid-column: 4;
+}
+
+.header ul li .dropdown-content{
+    position: absolute;
+    z-index: 2;
+    /* posicionamos al contenedor */
+    top: 10vh;
+    right: 0;
+    transition: all 0.5s;
+    display: block;
+    opacity: 0;  
+}
+
+.header ul{
+    position: relative;
+}
+
+/* Mostrar el menú desplegable al hacer hover sobre el enlace */
+.header ul li:hover .dropdown-content {
+  opacity: 1;    
+}
+
+/* Estilos para los elementos del menú desplegable */
+.header ul li .dropdown-content li {
+  padding: 20px 40px; /* Espaciado interno */
+  /*damos transicion a la selección*/
+  transition: all 0.3s ease; 
+}
+
+/* Cambiar color de fondo al pasar el mouse sobre elementos del menú desplegable */
+.header ul li .dropdown-content li:hover {
+  background-color: #575757;
 }
