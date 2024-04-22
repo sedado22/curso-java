@@ -21,7 +21,7 @@ num1 = "hola mundo";
 
 // Instrucciones de salida
 // 1- Salida de informacion a traves de la consola
-console.log(var1);
+console.log(PI);
 
 // 2 - Utilizando alert
 //alert(num1);
